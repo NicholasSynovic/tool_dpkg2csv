@@ -68,7 +68,7 @@ def main(inputFP: Path, outputFP: Path) -> None:
         data.append(stripSpaces(inputStr=line))
 
     df: DataFrame = buildDF(data=data)
-    print(df)
+    df.to_csv(path_or_buf=outputFP, index=False)
 
 
 if __name__ == "__main__":
